@@ -1,0 +1,102 @@
+{% load static %} {% include "header.html" %}
+<title>Home</title>
+
+
+  <body>
+    <div class="container">
+      <div class="hero-wrapper section-wrapper">
+        <main class="hero">
+          <div class="hero-welcome-text">
+            <h1 class="hero-big-text">Employment Campaign</h1>
+            <p class="hero-small-text"> Government of Nepal.</p>
+            <div class="hero-search-section">
+              <form action="{% url 'search' %}" class="hero-search-form">
+                <input
+                  type="text"
+                  class="hero-search"
+                  placeholder="Jilla Adhikrit"
+                  name="query"
+                />
+                <input
+                  type="submit"
+                  value="Search"
+                  class="hero-btn btn btn-primary"
+                />
+              </form>
+            </div>
+          </div>
+          <div class="hero-image-wrapper">
+            <img src="{% static "assets/homeImage.png" %}" 
+              alt="home page image"
+              class="hero-image"
+            />
+          </div>
+        </main>
+        <section class="our-services section-wrapper">
+          <h2 class="section-title">Our Services</h2>
+          <div class="services-lower-image-wrapper">
+              <img src="{% static "assets/servicesLeftLow.png" %}"  alt="" class="services-lower-image">
+           
+          </div>
+          <div class="services-cards-wrapper">
+            <ul class="services-cards">
+              <li class="services-card">
+                <h1 class="services-card-number">1</h1>
+                <div class="services-card-content">
+                  <div class="services-card-top">
+                    <i class="fas fa-search"></i>
+                    <h3 class="services-card-title">Job Search</h3>
+                  </div>
+                  <p class="services-card-bottom">
+                    At Employment Campaign by Nepal Government, you get to explore a wide range of job vacancies in just a click. 
+                    Employment Campaign by Nepal Government has made job search way more easier than ever. We filter thousands of available jobs to match with your search. 
+                    
+                  </p>
+                </div>
+              </li>
+              <li class="services-card">
+                <h1 class="services-card-number">2</h1>
+                <div class="services-card-content">
+                  <div class="services-card-top">
+                    <i class="fas fa-users"></i>
+                    <h3 class="services-card-title">Recruitment</h3>
+                  </div>
+                  <p class="services-card-bottom">
+                    At Employment Campaign by Nepal Government, we help you to find ideal employees for your vacant jobs. 
+                    We value each vacancy and ensure that you get the best employees for your company. 
+                    Recruitment is easy and your jobs reach the seekers easily. 
+                  </p>
+                </div>
+              </li>
+              <li class="services-card">
+                <h1 class="services-card-number">3</h1>
+                <div class="services-card-content">
+                  <div class="services-card-top">
+                    <i class="fas fa-laptop-house"></i>
+                    <h3 class="services-card-title">Recommendation</h3>
+                  </div>
+                  <p class="services-card-bottom">
+                    Employment Campaign by Nepal Government is a platform for seekers. At Employment Campaign by Nepal Government you'll be recommended jobs automatically without you having to explore them. 
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="more section-wrapper">
+            <p class="more-section-text">
+                WHO UNDERSTANDS IT PERSONALLY?
+                <br>
+                WE DO.
+            </p>
+            <div class="more-image-line">
+                <img src="{% static './assets/homeBottomImage.png'%}" alt="" class="more-image">
+            </div>
+          <div class="more-image-wrapper">
+            <img src="./assets/homeBottomImage.png" alt="" class="more-image" />
+          </div>
+          
+        </section>
+      </div>
+    </div>
+    {% include "footer.html" %}
